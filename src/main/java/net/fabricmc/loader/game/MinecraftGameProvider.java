@@ -30,6 +30,7 @@ import java.util.Optional;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.loader.entrypoint.EntrypointTransformer;
+import net.fabricmc.loader.entrypoint.minecraft.EntrypointInfdev;
 import net.fabricmc.loader.entrypoint.minecraft.EntrypointPatchBranding;
 import net.fabricmc.loader.entrypoint.minecraft.EntrypointPatchFML125;
 import net.fabricmc.loader.entrypoint.minecraft.EntrypointPatchHook;
@@ -50,7 +51,8 @@ public class MinecraftGameProvider implements GameProvider {
 	public static final EntrypointTransformer TRANSFORMER = new EntrypointTransformer(it -> Arrays.asList(
 		new EntrypointPatchHook(it),
 		new EntrypointPatchBranding(it),
-		new EntrypointPatchFML125(it)
+		new EntrypointPatchFML125(it),
+		new EntrypointInfdev(it)
 	));
 
 	@Override
