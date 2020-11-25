@@ -25,6 +25,7 @@ public final class AppletMain {
 
 	public static File hookGameDir(File file) {
 		File proposed = AppletLauncher.gameDir;
+		System.out.println("test")
 		if (proposed != null) {
 			return proposed;
 		} else {
