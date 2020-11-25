@@ -53,6 +53,7 @@ public class EntrypointInfdev extends EntrypointPatch {
 			classEmitter.accept(mainClass);
 
 			EntrypointTransformer.appletMainClass = entryPoint;
+			System.out.println(entryPoint);
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
