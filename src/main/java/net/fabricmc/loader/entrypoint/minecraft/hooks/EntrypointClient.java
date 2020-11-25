@@ -26,7 +26,6 @@ import io.github.minecraftcursedlegacy.api.ModPostInitializer;
 
 public final class EntrypointClient {
 	public static void start(File runDir, Object gameInstance) {
-		System.out.println("test2");
 		if (runDir == null) {
 			runDir = new File(".");
 		}
