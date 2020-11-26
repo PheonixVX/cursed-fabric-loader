@@ -33,6 +33,7 @@ public final class EntrypointClient {
 
 		FabricLoader.preInit(runDir, gameInstance);
 		EntrypointUtils.invoke("init", ModInitializer.class, ModInitializer::onInitialize);
+		EntrypointUtils.invoke("main", ModInitializer.class, ModInitializer::onInitialize);
 		EntrypointUtils.invoke("client", ClientModInitializer.class, ClientModInitializer::onInitializeClient);
 		Hacks.hack.run();
 		EntrypointUtils.invoke("postInit", ModPostInitializer.class, ModPostInitializer::onPostInitialize);
